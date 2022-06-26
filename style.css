@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Akshar:wght@300;400;500;600;700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Anek+Latin:wght@100;200;300;400;500;600;700;800&family=Anek+Malayalam:wght@100;200;300;400;500;600;700;800&family=Artifika&family=Barlow+Condensed:ital,wght@0,800;0,900;1,400;1,800&family=Bebas+Neue&family=Cairo:wght@200;600&family=Chelsea+Market&family=Coiny&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Courgette&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Indie+Flower&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,900&family=Kdam+Thmor+Pro&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Lobster&family=Macondo&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Pacifico&family=Patrick+Hand&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Righteous&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Sansita+Swashed:wght@300;400;500;600;700;800;900&family=Secular+One&family=Shadows+Into+Light&family=Spline+Sans+Mono:wght@300;400;500;600;700&family=Staatliches&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Kanit;
+    background-image: linear-gradient(135deg, #009FFF, #ec2F4B);
+    position: relative;
+}
+
+.home-page {
+    width: 94%;
+    height: 95vh;
+    padding-bottom: 1em;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 -2px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 1em 1em 0 0;
+    margin: auto;
+    margin-top: 10vh;
+    background-image: linear-gradient(135deg, #009FFF, #ec2F4B);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.home-page .contact {
+    width: 100%;
+    height: 4em;
+    background-color: rgba(255, 255, 255, 0.15);
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home-page .contact::after {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -18%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 3em ;
+    width: 50%;
+    height: 150%;
+  
+    background-color: white;
+    z-index: -1;
+}
+
+.home-page .contact a {
+    display: block;
+    color: black;
+    font-size: 1.1em;
+    text-transform: capitalize;
+
+}
+
+.home-page .contact a::first-letter {
+    color: white;
+    letter-spacing: 0.05em;
+
+}
+
+.home-page .contact p {
+    font-size: 0.9em;
+    position: relative;
+    font-weight: bold;
+}
+
+.home-page .container {
+    width: 100%;
+    height: calc(100% - 4em);
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+
+.home-page .container input {
+    appearance: none;
+    display: none;
+
+}
+
+.home-page .container label {
+    width: 2em;
+    height: 2em;
+    background-color: white;
+    filter: drop-shadow(0 0px 15px rgba(0, 0, 0, 0.6));
+    padding: 0.2em;
+    border-radius: 0.5em;
+    position: absolute;
+    top: 0.5em;
+    right: 0.7em;
+    display: flex;
+    z-index: 99;
+
+}
+
+.home-page .container label img {
+    animation: rotate-parame 2s infinite linear;
+}
+
+@keyframes rotate-parame {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.home-page .container :checked~.nav {
+    left: 80%;
+}
+
+.home-page .container .nav {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #009FFF, #ec2F4B);
+    transition: left 0.5s, transform 0.8s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+
+}
+
+.home-page .container .nav .link {
+    width: 25%;
+    height: 80%;
+    margin-top: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: column;
+
+}
+
+.home-page .container .nav a {
+    width: 5em;
+    text-align: center;
+    display: block;
+    font-size: 1.2em;
+    color: black;
+    text-transform: capitalize;
+    border-radius: 0.4em;
+    transform: rotate(90deg);
+
+}
+
+.home-page .container .nav a::first-letter {
+    color: white;
+    font-weight: bold;
+}
+
+
+.home-page .container .title {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 1em 0.5em;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.home-page .container .title p:nth-child(3) {
+    font-size: 1.2em;
+    margin: 0.2em 0;
+}
+
+.home-page .container .title p:nth-child(4)::first-letter {
+    font-size: 1.4em;
+    color: white;
+}
+
+.home-page .container .title h1 {
+    font-size: 2.4em;
+    color: white;
+}
+
+.home-page .container .title h1::first-letter {
+    text-transform: capitalize;
+    color: black;
+}
+
+.home-page .container .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.home-page .container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+main {
+    width: 94%;
+    min-height: 350vh;
+    padding-bottom: 1em;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 -2px 20px rgba(0, 0, 0, 0.4);
+    margin: auto;
+    margin-top: 5vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.about {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.about .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.about  .title h2 {
+    font-size: 1.7em;
+    text-transform: capitalize;
+    background-color: white;
+    padding: 0em 0.5em;
+}
+
+.about .title h2::first-letter {
+    color: #ec2F4B;
+    font-size: 1.4em;
+}
+
+
+.about .container .info {
+    width: 100%;
+    height: 55%;
+    
+}
+
+
+
+.about .container .info h2::first-letter {
+    color: #ec2F4B;
+    font-size: 1.4em;
+}
+
+.about .container .info p {
+    font-size: 1.1em;
+    padding: 0 0.5em;
+    line-height: 1.5;
+    margin-top: 0.5em;
+}
+
+.about .container .info p span {
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+
+}
+
+.about .container .info a {
+    width: fit-content;
+    display: block;
+    font-size: 1.2em;
+    text-transform: capitalize;
+    padding: 0 0.2em;
+    border-radius: 0.2em;
+    margin: 0.2em 0.7em;
+    color: #ec2F4B;
+    background-color: white;
+    box-shadow: 0 5px 15px #ec2F4B ;
+}
+
+.about .container .image {
+    width: 70%;
+    height: 45%;
+    overflow: hidden;
+    margin-left: 30%;
+    border-radius: 1em 0 0 1em;
+}
+
+.about .container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.service {
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 3vh;
+    position: relative;
+    overflow: hidden;
+  
+
+}
+
+.service .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+ 
+}
+.service .container .title h2 {
+    font-size: 1.7em;
+    text-transform: capitalize;
+    background-color: white;
+    padding: 0em 0.5em;
+}
+
+.service .container .title h2::first-letter {
+    color: #ec2F4B;
+    font-size: 1.4em;
+}
+.service .container .cards{
+    width: 100%;
+    margin-top: 2em;
+    padding: 1em 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+
+}
+.service .container .cards .card{
+    width: 100%;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7) , -5px 5px 15px rgba(0, 0, 0, 0.9);
+    border-radius: 0.5em;
+    overflow: hidden;
+    padding: 0.5em 1em;
+    z-index: 1;
+
+}
+.service .container .cards .card::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top right , #eb8c9a, #ec2F4B);
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+    z-index: -1;
+
+}
+.service .container .cards .card h3{
+    color: white;
+    font-size: 1.4em;
+    text-transform: capitalize;
+}
+.service .container .cards .card span{
+    display: block;
+    width: 40%;
+    height: 0.1em;
+    background-color: white;
+    margin: 0.5em 0;
+}
+.project {
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 3vh;
+    position: relative;
+    overflow: hidden;
+  
+
+}
+
+.project .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+ 
+}
+.project .container .title h2 {
+    font-size: 1.7em;
+    text-transform: capitalize;
+    background-color: white;
+    padding: 0em 0.5em;
+}
+
+.project .container .title h2::first-letter {
+    color: #ec2F4B;
+    font-size: 1.4em;
+}
+.project .container .all-box{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    position: relative;
+    padding: 1em;
+}
+.project .container .all-box .box{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), -5px 5px 15px rgba(0, 0, 0, 0.9);
+    border-radius: 0.5em;
+    position: relative;
+    overflow: hidden;
+}
+.project .container .all-box .box::after{
+    content: '';
+    position: absolute;
+    bottom: -31%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    border-radius: 50% 50% 0 0;
+    background-color: #eb8c9a;
+    z-index: -1;
+    transition: height 0.7s , bottom 0.7s , border-radius 1s;
+}
+.project .container .all-box .box:hover:after{
+   height: 100%;
+   border-radius: 0%;
+   bottom: 0%;
+
+}
+.project .container .all-box .box .info{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 0;
+}
+.project .container .all-box .box .info h3{
+    font-size: 1.3em;
+    text-transform: capitalize;
+    color:white;
+    position: relative;
+}
+.project .container .all-box .box .info a{
+    display: block;
+    color: black;
+    font-size: 1em;
+    text-transform: capitalize;
+    position: relative;
+    padding: 0 0.2em;
+    background-color: white;
+    border-radius: 0.4em;
+}
+.project .container .all-box .box p:last-child{
+text-align: center;
+margin-bottom: 1em;
+
+}
+
+
+
+.project .container .all-box .box .image{
+    width: 100%;
+    height: 18em;
+    padding: 0.5em;
+    overflow: hidden;
+    
+}
+.project .container .all-box .box .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:top ;
+    border-radius: 1em;
+    transition: 3s;
+}
+.project .container .all-box .box .image:hover img {
+    object-position:bottom ;
+} 
+.project .container .last-link-project{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.project .container .last-link-project a{
+    width: fit-content;
+    display: block;
+    color: white;
+    text-transform: capitalize;
+    position: relative;
+    overflow: hidden;
+
+}
+.project .container .last-link-project a::after{
+content: '';
+position: absolute;
+bottom: 0;
+left: 50%;
+width: 10%;
+height: 0.1em;
+background-color: white;
+animation: moving-bar-last-link 5s infinite linear;
+}
+@keyframes moving-bar-last-link {
+    0%{
+        transform: scalex(0);
+    }
+    50%{
+        transform: scalex(10);
+    }
+    100%{
+        transform: scalex(0);
+    }
+}
